@@ -33,13 +33,6 @@ O ponto focal de validação técnica deste desafio está concentrado no formul�
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5** (Estruturação Semântica)
-- **CSS3** *(Caso tenha aplicado estilos na pasta `css`, comente aqui)*
-
----
-
 ## 🚀 Como Executar o Projeto Localmente
 
 1. Clone o repositório ou baixe a pasta do projeto.
