@@ -6,39 +6,66 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Conheça os projetos e iniciativas da ONG Esperança.">
   <title>ONG Esperança - Projetos</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
+
   <header>
     <h1>ONG Esperança</h1>
     <p>Transformando vidas por meio da solidariedade.</p>
-    <nav aria-label="Navegação principal">
-      <a href="index.html">Início</a> |
-      <a href="projetos.html">Projetos</a> |
-      <a href="cadastro.html">Seja Voluntário</a>
+
+    <nav class="nav" aria-label="Navegação principal">
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu">&#9776;</label>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li class="dropdown">
+          <a href="projetos.html">Projetos</a>
+          <ul class="submenu">
+            <li><a href="#doacoes">Doações</a></li>
+            <li><a href="#voluntariado">Voluntariado</a></li>
+          </ul>
+        </li>
+        <li><a href="cadastro.html">Seja Voluntário</a></li>
+      </ul>
     </nav>
   </header>
-  <main>
+
+  <main class="container">
+
     <section id="projetos">
       <h2>Nossos projetos</h2>
       <p>Conheça algumas das iniciativas desenvolvidas pela ONG.</p>
+
       <article>
+        <span class="badge badge-doacao">Doação</span>
         <h3>Campanhas de arrecadação</h3>
         <p>Arrecadamos alimentos, roupas, materiais de higiene e outros itens para pessoas em situação de
           vulnerabilidade.</p>
       </article>
+
       <article>
+        <span class="badge badge-comunidade">Comunidade</span>
         <h3>Apoio à comunidade</h3>
         <p>Desenvolvemos ações para promover inclusão, solidariedade e melhoria da qualidade de vida.</p>
       </article>
+
       <article>
+        <span class="badge badge-voluntariado">Voluntariado</span>
         <h3>Ações educativas</h3>
         <p>Promovemos atividades de conscientização e participação social.</p>
       </article>
     </section>
+
     <section id="doacoes">
       <h2>Faça uma doação</h2>
-      <p>Sua contribuição financeira ajuda a manter nossos projetos e ampliar nossas ações sociais.</p>
+      <p>Sua contribuição ajuda a manter nossos projetos e ampliar nossas ações sociais.</p>
+
+      <div class="alert alert-success" role="status">
+        Sua contribuição ajuda a transformar vidas.
+      </div>
+
       <h3>Como sua contribuição ajuda?</h3>
       <ul>
         <li>Manutenção dos projetos sociais;</li>
@@ -46,11 +73,14 @@
         <li>Apoio às campanhas;</li>
         <li>Ampliação das ações da ONG.</li>
       </ul>
-      <a href="index.html#contato">Ver informações de contato</a>
+
+      <a class="button" href="index.html#contato">Ver informações de contato</a>
     </section>
+
     <section id="voluntariado">
       <h2>Seja um voluntário</h2>
       <p>Você pode contribuir oferecendo seu tempo, conhecimento e habilidades.</p>
+
       <h3>Como participar?</h3>
       <ul>
         <li>Campanhas de arrecadação;</li>
@@ -58,18 +88,31 @@
         <li>Atividades educativas;</li>
         <li>Ações comunitárias.</li>
       </ul>
-      <a href="cadastro.html">Quero ser voluntário</a>
+
+      <a class="button" href="cadastro.html">Quero ser voluntário</a>
+
+      <div class="toast" role="status">
+        Novas oportunidades de voluntariado disponíveis!
+      </div>
     </section>
+
     <section id="participe">
       <h2>Faça parte dessa transformação</h2>
       <p>Você pode realizar uma doação ou participar como voluntário.</p>
-      <a href="cadastro.html">Cadastre-se para participar</a>
+      <a class="button" href="cadastro.html">Cadastre-se para participar</a>
     </section>
+
   </main>
+
   <footer>
     <p>&copy; 2026 ONG Esperança. Todos os direitos reservados.</p>
-    <a href="index.html">Início</a> | <a href="projetos.html">Projetos</a> | <a href="cadastro.html">Seja Voluntário</a>
+    <nav aria-label="Navegação do rodapé">
+      <a href="index.html">Início</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="cadastro.html">Seja Voluntário</a>
+    </nav>
   </footer>
+
 </body>
 
 </html>
