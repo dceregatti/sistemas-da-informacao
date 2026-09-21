@@ -1,101 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Conheça a ONG Esperança e suas iniciativas sociais.">
-  <title>ONG Esperança - Início</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ONG Esperança - ações sociais e voluntariado.">
+  <title>ONG Esperança | Início</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <script type="module" src="../js/app.js"></script>
 </head>
-
 <body>
-
-  <header>
-    <h1>ONG Esperança</h1>
-    <p>Transformando vidas por meio da solidariedade.</p>
-
-    <nav class="nav" aria-label="Navegação principal">
-      <input type="checkbox" id="menu-toggle" class="menu-toggle">
-      <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu">&#9776;</label>
-      <ul class="menu">
-        <li><a href="index.html">Início</a></li>
-        <li class="dropdown">
-          <a href="projetos.html">Projetos</a>
-          <ul class="submenu">
-            <li><a href="projetos.html#doacoes">Doações</a></li>
-            <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
-          </ul>
-        </li>
-        <li><a href="cadastro.html">Seja Voluntário</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="container">
-
-    <section id="apresentacao">
-      <h2>Bem-vindo à ONG Esperança</h2>
-      <img src="img/voluntarios.jpg" alt="Grupo de voluntários reunido durante uma ação solidária" width="600">
-      <p>A ONG Esperança promove solidariedade e apoia pessoas em situação de vulnerabilidade social.</p>
-      <p>Por meio de projetos e voluntários, buscamos construir uma sociedade mais justa e solidária.</p>
-    </section>
-
-    <section id="sobre">
-      <h2>Sobre a ONG</h2>
-      <p>Nossa missão é conectar pessoas dispostas a ajudar com iniciativas que geram impacto positivo na comunidade.
-      </p>
-    </section>
-
-    <section id="iniciativas">
-      <h2>Nossas iniciativas</h2>
-
-      <article>
-        <h3>Ações solidárias</h3>
-        <p>Realizamos campanhas de arrecadação para apoiar pessoas que necessitam de auxílio.</p>
-      </article>
-
-      <article>
-        <h3>Apoio à comunidade</h3>
-        <p>Desenvolvemos ações para melhorar a qualidade de vida e fortalecer a comunidade.</p>
-      </article>
-
-      <article>
-        <h3>Voluntariado</h3>
-        <p>Incentivamos pessoas a contribuir com tempo, conhecimento e habilidades.</p>
-      </article>
-    </section>
-
-    <section id="participe">
-      <h2>Faça parte</h2>
-      <p>Você também pode contribuir para nossas iniciativas.</p>
-      <a class="button" href="cadastro.html">Quero ser voluntário</a>
-    </section>
-
-    <section id="contato">
-      <h2>Entre em contato</h2>
-      <address>
-        <p><strong>E-mail:</strong>
-          <a href="mailto:contato@ongespecial.org.br">contato@ongespecial.org.br</a>
-        </p>
-        <p><strong>Telefone:</strong>
-          <a href="tel:+551333334444">(13) 3333-4444</a>
-        </p>
-        <p><strong>Endereço:</strong> Rua da Solidariedade, 100 - Santos/SP</p>
-      </address>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026 ONG Esperança. Todos os direitos reservados.</p>
-    <nav aria-label="Navegação do rodapé">
-      <a href="index.html">Início</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="cadastro.html">Seja Voluntário</a>
-    </nav>
-  </footer>
-
-</body>
-
-</html>
+<header><div class="container">
+  <a href="index.html" class="logo">ONG Esperança</a>
+  <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-label="Abrir menu">
+  <label class="menu-icon" for="menu-toggle">☰</label>
+  <nav aria-label="Navegação principal"><ul class="menu">
+    <li><a href="index.html">Início</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="cadastro.html">Seja voluntário</a></li>
+  </ul></nav>
+</div></header>
+<main class="container"><div id="app">
+  <section aria-labelledby="titulo-principal"><h1 id="titulo-principal">Transformando vidas por meio da solidariedade</h1><p>Promovemos ações sociais, educação e participação comunitária.</p><img src="img/voluntarios.jpg" alt="Voluntários reunidos em uma ação da ONG"></section>
+  <section aria-labelledby="sobre"><h2 id="sobre">Sobre a ONG</h2><p>A ONG Esperança desenvolve iniciativas para apoiar pessoas e comunidades em situação de vulnerabilidade.</p></section>
+  <section aria-labelledby="iniciativas"><h2 id="iniciativas">Nossas iniciativas</h2><div class="grid-cards"><article><h3>Doação</h3><p>Campanhas de arrecadação de alimentos, roupas e materiais.</p></article><article><h3>Comunidade</h3><p>Ações de inclusão, cidadania e apoio comunitário.</p></article><article><h3>Voluntariado</h3><p>Participação em projetos sociais e educativos.</p></article></div></section>
+  <section aria-labelledby="participacao"><h2 id="participacao">Participe</h2><p>Você pode contribuir como doador ou voluntário.</p><a class="botao" href="cadastro.html">Quero ser voluntário</a></section>
+  <section aria-labelledby="contato"><h2 id="contato">Contato</h2><address>Rua da Esperança, 100 – Santos/SP<br>Email: contato@ongesperanca.org</address></section>
+</div></main>
+<footer><p>&copy; 2026 ONG Esperança</p></footer>
+</body></html>
