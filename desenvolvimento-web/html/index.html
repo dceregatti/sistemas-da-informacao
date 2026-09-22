@@ -9,16 +9,19 @@
   <script type="module" src="../js/app.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 <header><div class="container">
   <a href="index.html" class="logo">ONG Esperança</a>
-  <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-label="Abrir menu">
-  <label class="menu-icon" for="menu-toggle">☰</label>
-  <nav aria-label="Navegação principal"><ul class="menu">
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">☰</button>
+  <nav id="menu-principal" aria-label="Navegação principal"><ul class="menu">
     <li><a href="index.html">Início</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="cadastro.html">Seja voluntário</a></li>
   </ul></nav>
 </div></header>
-<main class="container"><div id="app">
-  <section aria-labelledby="titulo-principal"><h1 id="titulo-principal">Transformando vidas por meio da solidariedade</h1><p>Promovemos ações sociais, educação e participação comunitária.</p><img src="img/voluntarios.jpg" alt="Voluntários reunidos em uma ação da ONG"></section>
+<main id="conteudo-principal" class="container" tabindex="-1"><div id="app">
+  <section aria-labelledby="titulo-principal"><h1 id="titulo-principal">Transformando vidas por meio da solidariedade</h1><p>Promovemos ações sociais, educação e participação comunitária.</p><picture>
+  <source type="image/webp" srcset="img/voluntarios-480.webp 480w, img/voluntarios-960.webp 960w, img/voluntarios-1440.webp 1440w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 100vw, 1200px">
+  <img src="img/voluntarios.jpg" alt="Voluntários reunidos em uma ação da ONG" width="1600" height="900" loading="lazy" decoding="async">
+</picture></section>
   <section aria-labelledby="sobre"><h2 id="sobre">Sobre a ONG</h2><p>A ONG Esperança desenvolve iniciativas para apoiar pessoas e comunidades em situação de vulnerabilidade.</p></section>
   <section aria-labelledby="iniciativas"><h2 id="iniciativas">Nossas iniciativas</h2><div class="grid-cards"><article><h3>Doação</h3><p>Campanhas de arrecadação de alimentos, roupas e materiais.</p></article><article><h3>Comunidade</h3><p>Ações de inclusão, cidadania e apoio comunitário.</p></article><article><h3>Voluntariado</h3><p>Participação em projetos sociais e educativos.</p></article></div></section>
   <section aria-labelledby="participacao"><h2 id="participacao">Participe</h2><p>Você pode contribuir como doador ou voluntário.</p><a class="botao" href="cadastro.html">Quero ser voluntário</a></section>

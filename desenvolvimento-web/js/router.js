@@ -1,7 +1,7 @@
 let inicializado = false;
 
 function ehRotaInterna(link) {
-  if (!link || link.target === '_blank') return false;
+  if (!link || link.target === '_blank' || link.hasAttribute('download')) return false;
   if (link.origin !== window.location.origin) return false;
   return /\.html$/i.test(new URL(link.href).pathname);
 }
@@ -10,7 +10,9 @@ async function carregarPagina(url, adicionarHistorico = true) {
   const destino = new URL(url, window.location.href);
   const app = document.querySelector('#app');
   if (!app) return;
-  app.innerHTML = '<p>Carregando...</p>';
+
+  app.setAttribute('aria-busy', 'true');
+  app.innerHTML = '<p role="status">Carregando página...</p>';
 
   try {
     const resposta = await fetch(destino.href);
@@ -21,11 +23,13 @@ async function carregarPagina(url, adicionarHistorico = true) {
     if (!novoApp) throw new Error('Área da aplicação não encontrada.');
 
     app.innerHTML = novoApp.innerHTML;
+    app.setAttribute('aria-busy', 'false');
     if (adicionarHistorico) history.pushState({}, '', destino.href);
     document.title = documento.title || document.title;
     window.scrollTo({ top: 0, behavior: 'smooth' });
     window.dispatchEvent(new CustomEvent('spa:page-loaded'));
   } catch (erro) {
+    app.setAttribute('aria-busy', 'false');
     app.innerHTML = `<div class="alert alert-error" role="alert"><strong>Não foi possível carregar a página.</strong><p>${erro.message}</p></div>`;
   }
 }
@@ -33,13 +37,13 @@ async function carregarPagina(url, adicionarHistorico = true) {
 export function initRouter() {
   if (inicializado) return;
   inicializado = true;
+
   document.addEventListener('click', event => {
     const link = event.target.closest('a');
     if (!ehRotaInterna(link)) return;
     event.preventDefault();
     carregarPagina(link.href);
-    const menu = document.querySelector('.menu-toggle');
-    if (menu) menu.checked = false;
   });
+
   window.addEventListener('popstate', () => carregarPagina(window.location.href, false));
 }
