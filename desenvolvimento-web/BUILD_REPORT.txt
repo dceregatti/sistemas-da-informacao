@@ -1,0 +1,18 @@
+BUILD DE PRODUÇÃO — ONG ESPERANÇA
+
+HTML + CSS + JS antes da minificação: 28.070 bytes
+HTML + CSS + JS após a minificação: 23.144 bytes
+Redução estimada: 17,5%
+
+IMAGENS
+JPEG original (1600x900): 102.428 bytes
+WebP (1600x900): 40.718 bytes — redução de 60,2%
+WebP (480x270): 9.450 bytes — redução de 90,8%
+WebP (960x540): 21.148 bytes — redução de 79,4%
+WebP (1440x810): 35.322 bytes — redução de 65,5%
+
+A página usa <picture>, srcset e sizes para selecionar a versão WebP adequada à viewport, mantendo JPEG como fallback.
+
+Observação: a configuração Vite está presente no projeto. Os artefatos entregues nesta versão foram gerados com a rotina de minificação/bundling equivalente já utilizada, pois a instalação do Vite no ambiente de geração não foi concluída por indisponibilidade de rede.
+
+Correção pós-validação: referências de CSS/JS da pasta dist ajustadas para ../assets/ e imagem de conteúdo limitada a 900px de largura.
