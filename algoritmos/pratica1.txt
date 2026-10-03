@@ -1,0 +1,42 @@
+
+//criado em visualg.com.br
+
+algoritmo "Prática 1"
+
+var
+  produto: caracter
+  preco_anterior: real
+  preco_atual: real
+  variacao: real
+  situacao: caracter
+
+inicio
+  escreval("Digite o o nome do produto: ")
+  leia(produto)
+  escreval("Digite o preço anterior: ")
+  leia(preco_anterior)
+  escreval("Digite o preço atual: ")
+  leia(preco_atual)
+
+//cálculo da variação
+  variacao <- ((preco_atual - preco_anterior)/preco_anterior) * 100
+  escreva("Variaçã: ", variacao, "%")
+
+//verifica se houve aumento superior a 10%
+  se (variacao > 10) entao
+     escreva("ABUSO DE PREÇO")
+  fimse -
+  escreval("  ")
+
+//informação sobre a variação
+  se (preco_anterior = preco_atual) entao 
+    escreva("Estável")
+  senao
+      se (preco_anterior < preco_atual) entao 
+        escreva("Aumentou")
+      senao
+        escreva("Diminuiu")
+      fimse
+  fimse
+
+fimalgoritmo
